@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+
+
+
+// importación de styles / estilos
+import './assets/styles/logo.css'
+import './assets/styles/color.css'
+import './assets/styles/style.css'
+import './assets/styles/borders.css'
+import './assets/styles/responsive.css'
+import './assets/styles/login.css'
+
+
+import NavBar from './components/navbar';
+import SubNavBar from './components/subnabvar';
+import Carousel from './components/carousel';
+import Footer from './components/footer';
+import FooteContact from './components/footer_contact';
+import Login from './pages/login'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+{/*       
+      <NavBar />
+      <SubNavBar /> 
+      <Carousel />
+      <Footer/>
+    <FooteContact/> 
+  */}
+      
+      <NavBar />
+      <Login />
+      <FooteContact /> 
+     
     </div>
   );
 }

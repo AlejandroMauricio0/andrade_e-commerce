@@ -1,0 +1,44 @@
+/* mobile s*/
+@media (max-width: 320px) {
+    .dropdown-toggle {
+        font-size: 12px;
+    }
+
+    .img-vh {
+        /* width: 100vh; */
+        height: 100vh;
+    }
+
+}
+
+/* mobile M */
+@media (max-width: 375px) {
+
+    .img-vh {
+        width: 100vh;
+        height: 100vh;
+    }
+
+}
+
+/* mobile l */
+@media (max-width: 425px) {
+
+    .img-vh {
+        width: 100vh;
+        height: 100vh;
+    }
+
+}
+
+/* tablet */
+@media (max-width: 768px) {}
+
+/* laptop */
+@media (max-width: 1024px) {}
+
+/* laptop L */
+@media (max-width: 1440px) {}
+
+/* 4k */
+@media (max-width: 2560px) {}

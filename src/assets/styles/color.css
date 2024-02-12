@@ -1,0 +1,39 @@
+.bg-blue {
+    background-color: #0A1658;
+}
+
+.bg-blue-75 {
+    background-color: hsla(231, 80%, 19%, 0.752);
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-yellow {
+    background-color: #FFAD00;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+/* colors  */
+.color-white {
+    color: white;
+}
+
+.color-black {
+    color: black;
+}
+.color-blue{
+    color:  #0D3883;
+}
