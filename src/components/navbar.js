@@ -46,13 +46,13 @@ function NavBar() {
         setRandomNumber(newRandomNumber);
     };
 
-    useEffect(() => {
-        const intervalId = setInterval(generateRandomNumber, 2000);
+    // useEffect(() => {
+    //     const intervalId = setInterval(generateRandomNumber, 2000);
 
-        // Limpia el intervalo cuando el componente se desmonta
-        hiddenNavbar();
-        return () => clearInterval(intervalId);
-    }, [])
+    //     // Limpia el intervalo cuando el componente se desmonta
+    //     hiddenNavbar();
+    //     return () => clearInterval(intervalId);
+    // }, [])
 
 
 

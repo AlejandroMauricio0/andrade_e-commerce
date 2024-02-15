@@ -22,12 +22,8 @@
     "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.8",
-<<<<<<< HEAD
     "sweetalert2": "^11.10.5",
     "sweetalert2-react-content": "^5.0.7",
-=======
-    "uninstall": "^0.0.0",
->>>>>>> 84bf8ba25220404751b0f352bce057ba82bdfb6f
     "web-vitals": "^2.1.4"
   },
   "scripts": {

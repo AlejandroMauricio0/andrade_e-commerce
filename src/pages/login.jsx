@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2'
 
 function Login() {
@@ -38,6 +38,7 @@ function Login() {
     const handleSignInClick = () => {
         setIsSignUpActive(false);
     };
+    
 
     // async function loginUser(credentials) {
     //     try {
@@ -56,7 +57,6 @@ function Login() {
     // }
 
     async function loginUser (credentials) {
-        console.log(credentials)
         return await fetch('http://192.168.1.121:3003/user/login', {
            method: 'POST',
            headers: {
@@ -95,13 +95,16 @@ function Login() {
     }
 
 
-    async function handleSubmit() {
+    async function handleSubmit(event) {
+        event.preventDefault();
+        console.log('Printing...');
         const email = username;
 
         const response = await loginUser({
             email,
             password
         });
+        
     }
 
     async function handleRegister() {
@@ -116,33 +119,31 @@ function Login() {
     return (
         <div className='body'>
             <div className={`container-login ${isSignUpActive ? 'right-panel-active' : ''} `} id="container-login">
-                <div class="form-container-login  sign-up-container-login">
+                <div className="form-container-login  sign-up-container-login">
                     <form className='form-login' onSubmit={handleRegister}>
                         <h1>Create Account</h1>
                         <span className='span-login'>or use your email for registration</span>
                         <input className='input-login' type="text" placeholder="Name" value={nameRegister} onChange={handleNameRegisterChange} required/>
                         <input className='input-login' type="email" placeholder="Email" value={emailRegister} onChange={handleEmailRegisterChange} required/>
                         <input className='input-login' type="password" placeholder="Password" value={passwordRegister} onChange={handlePasswordRegisterChange} required/>
-                        <button className='button-login'>Sign Up</button>
-
-                        {/* <a className="ghost button-login" onClick={handleSignInClick}>Sign In</a> */}
+                        <button className='button-login'> Sign Up</button>
 
                         <p className='size-12'>You have an account?
                             <a className="color-blue" onClick={handleSignInClick}>  Click here</a>
                         </p>
                     </form>
                 </div>
-                <div class="form-container-login  sign-in-container-login">
-                    <form className="form-login " onSubmit={handleSubmit}>
+                <div className="form-container-login  sign-in-container-login">
+                    <form className="form-login" onSubmit={handleSubmit}>
                         <h1>Sign in</h1>
                         <span>Use your account</span>
                         <input className='input-login' type="email" placeholder="Email" value={username} onChange={handleUsernameChange} required/>
                         <input className='input-login' type="password" placeholder="Password" value={password} onChange={handlePasswordChange} required/>
                         {/* <a href="#">Forgot your password?</a> */}
-                        <button className='button-login'>Sign In</button>
+                        <button className='button-login'>Sign in</button>
                         <br/>
-                        <p className='size-12'>Dont have a login?
-                            <a className="color-blue" onClick={handleSignUpClick}>Sign Up</a>
+                        <p className='size-12'>Don't have a account? 
+                            <a className="color-blue" onClick={handleSignUpClick}> Sign Up</a>
                         </p>
                     </form>
                 </div>
