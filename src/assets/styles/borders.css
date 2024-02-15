@@ -1,3 +1,11 @@
+
+.border-b{
+    border-bottom: 4px solid #D9D9D9;
+}
+.border-b-5{
+    border-bottom: 5px solid #D9D9D9;
+    /* width: 70%; */
+}
 .border-left {
     border-left: 2px solid white;
     /* width: 20px; */

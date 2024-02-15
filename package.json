@@ -14,12 +14,20 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1",
+    "jquery-zoom": "^1.7.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-img-zoom": "^0.1.0",
+    "react-router-dom": "^6.22.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.8",
+<<<<<<< HEAD
     "sweetalert2": "^11.10.5",
     "sweetalert2-react-content": "^5.0.7",
+=======
+    "uninstall": "^0.0.0",
+>>>>>>> 84bf8ba25220404751b0f352bce057ba82bdfb6f
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -45,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.33.2"
   }
 }

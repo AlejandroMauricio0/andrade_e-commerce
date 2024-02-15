@@ -1,8 +1,8 @@
 function SubNavBar() {
     return (
         <>
-            <div className="container-fluid ">
-                <nav className="" data-bs-theme="ligth">
+            <div className="container-fluid border-b-5 ">
+                <nav  data-bs-theme="ligth">
                     <div className="d-flex justify-content-center">
                         <div className="dropdown">
                             <button className="btn size-15 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">

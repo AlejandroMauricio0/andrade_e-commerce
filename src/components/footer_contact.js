@@ -70,11 +70,12 @@ function FooteContact() {
                             <label htmlFor="validationServer04" className="form-label">Aceptamos</label>
                             <div className="container text-center">
                                 <div className="row">
-                                    <div className="col ">
-                                        <img src={master_card} className='' width={"80x"} alt="" />
+                                    <div className="col center">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" width="120px" alt="" />
                                     </div>
-                                    <div className="col ">
-                                        <img src={paypal} className='' width={"80px"} alt="" />
+                                    <div className="col center">
+                                        <img src={master_card} className='' width={"80x"} alt="" />
+                                        {/* <img src={paypal} className='' width={"80px"} alt="" /> */}
                                     </div>
                                     <div className="col ">
                                         <img src={visa} className='' width={"80px"} alt="" />
