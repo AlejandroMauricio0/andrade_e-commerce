@@ -1,35 +1,26 @@
 function Table() {
     return (
         <>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div className="width-100 mt-4 ">
+                <div className="container-fluid">
+                    <div className="row  border border-2 rounded">
+                        <div className="col-6 col-sm-4 text-start width-50 gidogu size-25">Product phase</div>
+                        <div className="col-6 col-sm-4 center-rigth width-50 forum size-15">Obsolete</div>
+                    </div>
+                    <div className="row  border border-2 rounded bg-blue color-white">
+                        <div className="col-6 col-sm-4 text-start width-50 gidogu size-25">Dimensions (cm)</div>
+                        <div className="col-6 col-sm-4 center-rigth width-50 forum size-15">5,00 x 29,00 x 21,70</div>
+                    </div>
+                    <div className="row  border border-2 rounded ">
+                        <div className="col-6 col-sm-4 text-start width-50 gidogu size-25">Weight (kg)</div>
+                        <div className="col-6 col-sm-4 center-rigth width-50 forum size-15">1.51</div>
+                    </div>
+                    <div className="row  border border-2 rounded bg-blue color-white">
+                        <div className="col-6 col-sm-4 text-start width-50 gidogu size-25">ID:</div>
+                        <div className="col-6 col-sm-4 center-rigth width-50 forum size-15 float-end ">6SN1123-1AA00-0DA1</div>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }

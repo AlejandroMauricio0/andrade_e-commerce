@@ -1,14 +1,21 @@
 import Zoom from "react-img-zoom";
 import simodrive from '../assets/images/simodrive/1.jpg'
-function VisorImage() {
+function VisorImage({ changeImg }) {
+
+    // console.log("visor= ", changeImg);
+
     return (
 
-        <Zoom
-            img={simodrive}
-            zoomScale={3}
-            width={400}
-            height={400}
-        />
+        <div className="border border-2">
+
+            <Zoom
+                key={changeImg}
+                img={changeImg}
+                zoomScale={3}
+                width={500}
+                height={400}
+            />
+        </div>
     );
 }
 

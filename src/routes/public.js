@@ -9,19 +9,73 @@ import Filter from "../components/filter";
 import Products from "../components/products";
 import Searching from "../pages/searching";
 import ViewProduct from "../pages/view_producto";
+import Cart from "../pages/cart";
+import { useState, useEffect } from "react";
 
 
 
 function Public() {
+
+    // const [myCart, setMyCart] = useState
+    const [myCart, setMyCart] = useState([]);
+
+
+
+
+    // const addProduct = () => {
+    //     setMyCart([...myCart, {
+    //         name: 'producto', quantity: 1
+    //     }]);
+    // }
+
+
+    // Guardar estado en el Local Storage
+    // useEffect(() => {
+    //     localStorage.setItem('myCart', JSON.stringify(myCart));
+    // }, [myCart]);
+
+    // Cargar estado desde el Local Storage al montar el componente
+    // useEffect(() => {
+    //     const storedState = localStorage.getItem('myCart');
+    //     if (storedState) {
+    //         setMyCart(JSON.parse(storedState));
+    //     }
+    // }, []);
+
+
+
+    // useEffect(() => {
+    //     // Guardar en Local Storage solo si hay cambios en myCart
+    //     // localStorage.setItem('myCart', JSON.stringify(myCart));
+
+    //     // Recuperar datos del Local Storage solo si no hay datos actuales en myCart
+    //     if (!myCart || myCart.length === 0) {
+    //         const storedState = localStorage.getItem('myCart');
+    //         if (storedState) {
+    //             setMyCart(JSON.parse(storedState));
+    //         }
+    //     }
+    // }, [myCart]);
+
+
     return (
         <Routes>
             {/* searching */}
-            <Route path="/view_product" element={
+            <Route path="/cart" element={
                 <div>
-                    <NavBar />
+                    <NavBar myCart={myCart} />
                     <SubNavBar />
                     <div className="container-fluid">
-                        <ViewProduct/>
+                        <Cart myCart={myCart} setMyCart={setMyCart} />
+                    </div>
+                </div>
+            } />
+            <Route path="/view_producto" element={
+                <div>
+                    <NavBar myCart={myCart} />
+                    <SubNavBar />
+                    <div className="container-fluid">
+                        <ViewProduct myCart={myCart} setMyCart={setMyCart} />
                     </div>
                 </div>
             }>
@@ -29,10 +83,10 @@ function Public() {
             {/* searching */}
             <Route path="/search" element={
                 <div>
-                    <NavBar />
+                    <NavBar myCart={myCart} />
                     <SubNavBar />
-                    <div className="container-fluid">
-                        <Searching/>
+                    <div className="container-fluid ">
+                        <Searching />
                     </div>
                 </div>
             }>
@@ -41,7 +95,7 @@ function Public() {
             {/* home */}
             <Route path="/dashboard" element={
                 <div>
-                    <NavBar />
+                    <NavBar myCart={myCart} />
                     <SubNavBar />
                     <Carousel />
                     <Footer />
@@ -53,7 +107,7 @@ function Public() {
             {/* login */}
             <Route path="/login" element={
                 <div>
-                    <NavBar />
+                    <NavBar myCart={myCart} />
                     <Login />
                     <FooteContact />
                 </div>

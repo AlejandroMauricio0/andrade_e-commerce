@@ -10,7 +10,6 @@ function Loading() {
     const load = () => {
         setTimeout(() => {
             navigate('../dashboard')
-            console.log("overtime");
         }, 1000);
     };
 

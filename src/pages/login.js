@@ -17,7 +17,7 @@ function Login() {
     return (
         <div className='body'>
             <div className={`container-login ${isSignUpActive ? 'right-panel-active' : ''} `} id="container-login">
-                <div class="form-container-login  sign-up-container-login">
+                <div className="form-container-login  sign-up-container-login">
                     <form className='form-login' action="#">
                         <h1>Create Account</h1>
                         <span className='span-login'>or use your email for registration</span>
@@ -33,7 +33,7 @@ function Login() {
                         </p>
                     </form>
                 </div>
-                <div class="form-container-login  sign-in-container-login">
+                <div className  ="form-container-login  sign-in-container-login">
                     <form className="form-login " action="#">
                         <h1>Sign in</h1>
                         <span>Use your account</span>

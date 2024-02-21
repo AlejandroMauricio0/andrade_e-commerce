@@ -23,10 +23,12 @@ import Public from './routes/public';
 import Loading from './components/loading';
 
 import { Routes, Route } from 'react-router';
+import { useState } from 'react';
 
 function App() {
+  
   return (
-    <div className="App"> 
+    <div className="App">
       <Routes>
         <Route path='/*' element={
           <div className=''>

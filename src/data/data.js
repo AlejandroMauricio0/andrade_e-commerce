@@ -1,12 +1,86 @@
-import img1 from '../assets/images/simodrive/1.jpg'
+import img1 from '../assets/images/simodrive/n.jpg'
 import img2 from '../assets/images/simodrive_2x50a/1.jpg'
 import img3 from '../assets/images/simodrive_55_71KW/13.png'
 
 
 const products = [
-    { id: "3TF4722-0BB4-ZA01", name: "Simodrive 2X50A", price: "MXN  $26, 927, 14", inStock: true, imagen: img1, state: "usado" },
-    { name: "Simodrive 3TF47", price: "MXN  $26,927,14", inStock: true, imagen: img2 },
-    { name: "Simodrive E/R Modul INT. 55/71 KW", price: "MXN  $26,927,14", inStock: false, imagen: img3 },
+    {
+        id: "1",
+        description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply",
+        name: "Simodrive 2X50A",
+        price: 10.22,
+        inStock: true,
+        imagen: img1,
+        state: "usado"
+    },
+    { id: "2", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 25.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "3", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 20.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "4", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "5", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "6", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "7", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "8", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "9", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "10", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+
+    { id: "11", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "12", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "13", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "14", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "15", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "16", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "17", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "18", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "19", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "20", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+
+    { id: "21", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "semi-nuevo" },
+    { id: "22", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "semi-nuevo" },
+    { id: "23", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "semi-nuevo" },
+    { id: "24", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "semi-nuevo" },
+    { id: "25", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "semi-nuevo" },
+    { id: "26", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "semi-nuevo" },
+    { id: "27", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "semi-nuevo" },
+    { id: "28", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "semi-nuevo" },
+    { id: "29", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "semi-nuevo" },
+    { id: "30", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "semi-nuevo" },
+
+    { id: "31", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "piezas" },
+    { id: "32", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "piezas" },
+    { id: "33", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "piezas" },
+    { id: "34", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "piezas" },
+    { id: "35", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "piezas" },
+    { id: "36", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "piezas" },
+    { id: "37", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "piezas" },
+    { id: "38", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "piezas" },
+    { id: "39", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "piezas" },
+    { id: "40", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "piezas" },
+
+    { id: "41", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "42", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "43", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "44", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "45", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "46", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "47", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "48", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "49", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+    { id: "50", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "nuevo" },
+
+    { id: "51", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "52", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "53", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "54", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "55", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "56", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "57", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "58", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "59", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+    { id: "60", description: "3-PHASE IEC RATED CONTACTOR, 25HP-230V, 50HP - 460V, JC-Electronics is NOT an official authorized distributor for Siemens. The original manufacturer's warranty does not apply", name: "Simodrive 2X50A", price: 2692714.22, inStock: true, imagen: img1, state: "usado" },
+
+
+
+
 ]
 
 
@@ -14,4 +88,4 @@ const data = {
     product: [{ products }],
 }
 
-export default data;
+export default data;    
