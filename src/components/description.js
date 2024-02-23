@@ -22,7 +22,7 @@ function Description({ myCart, setMyCart, content }) {
             quantity: 1,
             totaly: parseFloat(content.price),
             price: parseFloat(content.price),
-
+            image:content.image 
         }
 
         setMyCart([...myCart, NewProduct]);
@@ -98,8 +98,8 @@ function Description({ myCart, setMyCart, content }) {
                 </div>
                 {/* <h3 className="border-bottom text-start"> Simodrive 3TF47-722-0BBA-ZA01 - Conector magnetico</h3> */}
                 <div className="border-bottom mt-4">
-                    <h5 className=" text-start mb-3 mt-3 size-30 color-7B7B7B gidogu">Price:
-                        <b className="gidogu size-30 color-black">  {content.price}</b>
+                    <h5 className=" text-start mb-3 mt-3 size-30 color-7B7B7B gidogu">Precio:
+                        <b className="gidogu size-30 color-black"> MXN ${content.price}</b>
                     </h5>
                 </div>
 
@@ -112,17 +112,17 @@ function Description({ myCart, setMyCart, content }) {
                 </div>
 
                 <div className="pt-5">
-                    <h2 className="text-start gidogu size-40 color-7B7B7B">Description:</h2>
-                    <p className="text-start">
+                    <h2 className="text-start gidogu size-40 color-7B7B7B">Descripción:</h2>
+                    <p className="justify-txt ">
                         {content.description}
                     </p>
 
                     <div className="center mt-5">
                         <div className="col-md-8">
-                            <button type="button" className="btn btn-outline-dark width-100" onClick={() => validate(content.id, content)}>Add to Cart</button>
+                            <button type="button" className="btn btn-outline-dark width-100" onClick={() => validate(content.id, content)}>Añadir a Carrito</button>
                         </div>
                         <div className="col-md-8 pt-2">
-                            <button type="button" className="btn btn-warning width-100">buy</button>
+                            <button type="button" className="btn btn-warning width-100">Comprar</button>
                         </div>
                         {/* <div className="col-6 col-md-4">.col-6 .col-md-4</div> */}
                     </div>

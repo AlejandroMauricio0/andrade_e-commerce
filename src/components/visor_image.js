@@ -1,5 +1,8 @@
 import Zoom from "react-img-zoom";
-import simodrive from '../assets/images/simodrive/1.jpg'
+import img1 from '../assets/images/simodrive/1.jpg'
+
+
+
 function VisorImage({ changeImg }) {
 
     // console.log("visor= ", changeImg);
@@ -10,10 +13,13 @@ function VisorImage({ changeImg }) {
 
             <Zoom
                 key={changeImg}
+                
                 img={changeImg}
+                // img={'http://192.168.1.121:3000/Admin/viewImage/' + `${changeImg}`}
+                // img={'http://192.168.1.121:3000/Admin/viewImage/' + `${changeImg}`}
                 zoomScale={3}
-                width={500}
-                height={400}
+                    width={500}
+                    height={400}
             />
         </div>
     );

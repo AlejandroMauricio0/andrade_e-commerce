@@ -33,8 +33,9 @@ function Barleft({ setChangeImg, content }) {
 
     useEffect(() => {
         changeImg(content.image)
-        // console.log("iamgenn", content.image);
+        console.log("iamgenn", content.image);
     }, []);
+
     return (
         <>
             <div className=" center ">

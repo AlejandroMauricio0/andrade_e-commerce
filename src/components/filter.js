@@ -19,7 +19,7 @@ function Filter({ setStartCantidad, setEndCantidad, startCantidad, endCantidad, 
 
         setStateProduct(selectedState);
 
-        const productFilter = productos.filter(content => content.state === selectedState);
+        const productFilter = productos.filter(content => content.conditions === selectedState);
 
         setproductosModify(productFilter)
     };
@@ -106,14 +106,14 @@ function Filter({ setStartCantidad, setEndCantidad, startCantidad, endCantidad, 
                                 Para piezas
                             </label>
                         </div>
-                       
+
                     </div>
-                    <p>Selected option: {stateProduct}</p>
+                    <p>Opcion seleccionada: {stateProduct}</p>
                 </div>
 
                 {/* pagination button*/}
 
-                <div className='center'>
+                {/* <div className='center'>
                     <nav aria-label=" Page navigation example">
 
                         <ul className="pagination">
@@ -130,8 +130,7 @@ function Filter({ setStartCantidad, setEndCantidad, startCantidad, endCantidad, 
                             </li>
                         </ul>
                     </nav>
-                </div>
-
+                // </div> */}
             </div>
         </>
     );

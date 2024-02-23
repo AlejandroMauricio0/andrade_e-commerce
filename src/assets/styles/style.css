@@ -91,6 +91,9 @@
     height: 100%;
 }
 
+.heigth-90 {
+    height: 90%;
+}
 .heigth-80-vh {
     height: 80vh;
 }
@@ -197,4 +200,11 @@ a {
 .overflow-scroll::-webkit-scrollbar-thumb   {
     background-color: #0A1658;
     border-radius: 10px;
+}
+
+/* texto justificado */
+
+.justify-txt{
+    text-align: justify;
+    text-justify: inter-word;
 }

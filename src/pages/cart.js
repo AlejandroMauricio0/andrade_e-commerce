@@ -9,7 +9,7 @@ function Cart({ myCart, setMyCart }) {
 
 
     const [totalPay, setTotalPay] = useState(0);
-
+    
 
 
     const total = () => {
@@ -54,18 +54,20 @@ function Cart({ myCart, setMyCart }) {
         if (quantity <= 1) {
 
             Swal.fire({
-                title: "Are you sure?",
-                text: "You won't be able to revert this!",
+                title: "Estas seguro?",
+                text: "No podrás deshacer esto!",
                 icon: "warning",
-                showCancelButton: true,
+                // showCancelButton: true,
+                showDenyButton: true,
                 confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, delete it!"
+                // cancelButtonColor: "#d33",
+                confirmButtonText: "Si, eliminarlo!",
+                denyButtonText: "Cancelar"
             }).then((result) => {
                 if (result.isConfirmed) {
                     Swal.fire({
-                        title: "Deleted!",
-                        text: "Your file has been deleted.",
+                        title: "Eliminado!",
+                        text: "Tu producto ha sido eliminado.",
                         icon: "success"
                     });
                     removeElement(uid);
@@ -125,7 +127,9 @@ function Cart({ myCart, setMyCart }) {
                                 myCart.map((content, index) => (
                                     <div className="d-flex " key={index}>
                                         <div className="col-sm-8 p-2 flex-fill text-start ">
-                                            <img src={product} alt="" width={75} />
+                                            <img src={content.image} alt="" width={75} />
+                                            {/* <img src={'http://192.168.1.121:3000/Admin/viewImage/' + `${content.image}`} alt="" width={75} /> */}
+                                            {/* <img src={product} alt="" width={75} /> */}
                                         </div>
                                         <div className="col-3 p-2 flex-fill center">
                                             <div className="btn-group" >
@@ -160,14 +164,15 @@ function Cart({ myCart, setMyCart }) {
                             </div>
 
                             <div className='pt-5 pb-5 border-bottom border-4'>
-                                <p className='text-start forum size-20'>Impuestos incluidos {"\t\t\t\t\t\t"}
-                                    <b>{(totalPay * 0.16).toFixed(2)   }</b>
-                                </p>
-                                <p className='text-start forum size-20'>Gastos de envío calculados en la caja</p>
+                                {/* <p className='text-start forum size-20'>Impuestos incluidos {"\t\t\t\t\t\t"}
+                                    <b>{(totalPay * 0.16).toFixed(2)}</b>
+                                </p> */}
+                                {/* <p className='text-start forum size-20'>Los Gastos y Envios seran acordados</p> */}
+                                <p className='text-start forum size-20'>Los términos relativos a los gastos y envíos serán objeto de acuerdo mutuo.</p>
                             </div>
 
                             <div className='container width-100 heigth-250-px center '>
-                                <button type="button" className="btn btn-warning width-50 border-black">Warning</button>
+                                <button type="button" className="btn btn-warning width-50 border-black">Comprar</button>
                             </div>
                         </div>
 

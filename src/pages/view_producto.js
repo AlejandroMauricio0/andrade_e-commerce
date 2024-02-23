@@ -5,18 +5,21 @@ import Table from "../components/table";
 import VisorImage from "../components/visor_image";
 import { useLocation } from "react-router-dom";
 
+import img1 from '../assets/images/simodrive/1.jpg';
 
 function ViewProduct({ myCart, setMyCart }) {
 
   const location = useLocation();
 
+  // estado original
   const [changeImg, setChangeImg] = useState("");
+  // const [changeImg, setChangeImg] = useState(img1);
 
 
   // get data product
 
   const content = location.state;
-
+  
   console.log(content.state);
   return (
     <>
@@ -34,14 +37,14 @@ function ViewProduct({ myCart, setMyCart }) {
                 <div className="border border-2">
                   <VisorImage changeImg={changeImg} />
                 </div>
-                <Table />
+                <Table content={content} />
               </div>
             </div>
             <br />
 
           </div>
           <div className="col-sm-6 bg-re d">
-            <Description myCart={myCart} setMyCart={setMyCart} content={content}/>
+            <Description myCart={myCart} setMyCart={setMyCart} content={content} />
           </div>
         </div>
       </div>

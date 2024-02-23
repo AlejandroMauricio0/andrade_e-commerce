@@ -6,10 +6,11 @@ import { Link, useActionData, useLocation, useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2';
 // import images
 import logo from '../assets/images/ANDRADE_MKTPLAN_BRANDING-02.png'
-
-
+import { get } from 'jquery';
 
 function NavBar({ myCart }) {
+
+
 
     const keywords = [
         "CNC",
@@ -25,21 +26,22 @@ function NavBar({ myCart }) {
     // state
     const [activate, setActivate] = useState(true);
     const [randomNumber, setRandomNumber] = useState(0);
-    const [product, setProduct] = useState(' ');
+    const [product, setProduct] = useState({ producto: '' });
 
     const location = useLocation();
     let text = location.pathname;
     const myArray = text.split("/");
     const navigate = useNavigate();
 
+
     const searchProduct = () => {
-        // navigate("../search?=" + product.producto);
-        if (product.producto == '' || product.producto == "undefined") {
+
+        if (product.producto == '' || product.producto === 'undefined') {
             const Toast = Swal.mixin({
                 toast: true,
                 position: "top-end",
                 showConfirmButton: false,
-                timer: 1000,
+                timer: 3000,
                 timerProgressBar: true,
                 didOpen: (toast) => {
                     toast.onmouseenter = Swal.stopTimer;
@@ -52,7 +54,23 @@ function NavBar({ myCart }) {
             });
         } else {
             navigate("../search?=" + product.producto);
+            // obtiene los productos
 
+            const Toast = Swal.mixin({
+                toast: true,
+                position: "top-end",
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                }
+            });
+            Toast.fire({
+                icon: "success",
+                title: "Busqueda Realizada"
+            });
         }
     }
 
@@ -88,15 +106,14 @@ function NavBar({ myCart }) {
         }
     };
 
-    useEffect(() => {
-        // const intervalId = setInterval(generateRandomNumber, 2000);
+    
+    
 
-        // Limpia el intervalo cuando el componente se desmonta
+    useEffect(() => {
+
         hiddenNavbar();
-        // return () => clearInterval(intervalId);
     }, [1])
 
-    console.log(myCart.length);
 
     return (
         <>
