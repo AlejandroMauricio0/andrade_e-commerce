@@ -1,13 +1,29 @@
-import { useEffect } from 'react';
-import img1 from '../assets/images/simodrive/1.jpg'
-import img2 from '../assets/images/simodrive/3.jpg'
-import img3 from '../assets/images/simodrive/4.jpg'
-import img4 from '../assets/images/simodrive/5.jpg'
-
-
-// const img1 = 'https://i.ebayimg.com/00/s/MTYwMFgxNjAw/z/NisAAOSwd9Njzk7v/$_57.PNG?set_id=880000500F'
+import { useEffect, useState } from 'react';
 
 function Barleft({ setChangeImg, content }) {
+
+    const [imageDescription, setImageDescription] = useState([]);
+
+    const getImage = async () => {
+        const url = `http://192.168.100.71:3003/Admin/viewImageArray/${content.image_fk}`;
+
+        try {
+            let response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const data = await response.json();
+            setImageDescription(data.images);
+
+        } catch (error) {
+            console.error('Error al obtener productos:', error);
+            alert('Error al obtener productos:', error);
+        }
+    }
+    console.log("images", content);
 
     const styles = {
         ul: {
@@ -20,10 +36,11 @@ function Barleft({ setChangeImg, content }) {
                 display: 'block',
                 width: '60px',
                 border: '1px solid #CDCDCD',
-                // backgroundColor: '#dddddd',
+                padding: '4px'
             },
         },
     };
+
 
 
     const changeImg = (img) => {
@@ -32,36 +49,43 @@ function Barleft({ setChangeImg, content }) {
 
 
     useEffect(() => {
+        getImage();
+
         changeImg(content.image)
-        console.log("iamgenn", content.image);
     }, []);
+
+    // us
 
     return (
         <>
-            <div className=" center ">
-                <ul style={styles.ul}>
-                    <li className='pt-2'>
-                        <div style={styles.li.div} >
-                            <img src={img1} alt="" width={"50x"} onClick={() => changeImg(img1)} />
-                        </div >
-                    </li>
-                    <li className='pt-2'>
-                        <div style={styles.li.div} className='border border-2'>
+            <div className="center">
+                <div className=''>
+                    <ul className='ul-img' style={styles.ul}>
+                        <li className='p-2'>
+                            <div style={styles.li.div} >
 
-                            <img src={img2} alt="" width={"50x"} onClick={() => changeImg(img2)} />
-                        </div>
-                    </li>
-                    <li className='pt-2'>
-                        <div style={styles.li.div} >
-                            <img src={img3} alt="" width={"50x"} onClick={() => changeImg(img3)} />
-                        </div>
-                    </li>
-                    <li className='pt-2'>
-                        <div style={styles.li.div} >
-                            <img src={img4} alt="" width={"50x"} onClick={() => changeImg(img4)} />
-                        </div>
-                    </li>
-                </ul>
+                                <img src={imageDescription[0]} alt="" width={"50x"} onClick={() => changeImg(imageDescription[0])} />
+                            </div >
+                        </li>
+
+                        <li className='p-2'>
+                            <div style={styles.li.div} className='border border-2'>
+
+                                <img src={imageDescription[1]} alt="" width={"50x"} onClick={() => changeImg(imageDescription[1])} />
+                            </div>
+                        </li>
+                        <li className='p-2'>
+                            <div style={styles.li.div} >
+                                <img src={imageDescription[2]} alt="" width={"50x"} onClick={() => changeImg(imageDescription[2])} />
+                            </div>
+                        </li>
+                        <li className='p-2'>
+                            <div style={styles.li.div} >
+                                <img src={imageDescription[3]} alt="" width={"50x"} onClick={() => changeImg(imageDescription[3])} />
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </>
     );

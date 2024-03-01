@@ -27,7 +27,7 @@ function Cart({ myCart, setMyCart }) {
 
     const addItemProduct = (uid) => {
         const NewProduct = myCart.map((product) => {
-            if (product.uid === uid) {
+            if (product.uid === uid && product.quantity <  product.stock) {
                 return {
                     ...product,
                     quantity: product.quantity + 1,

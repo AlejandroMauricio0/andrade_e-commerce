@@ -1,13 +1,9 @@
 import { useLocation } from "react-router-dom";
-import CardProduct from "./card_products";
+import ViewProduct from "./view_products";
 import { useEffect, useState } from "react";
 import Load from './load'
 
 function Products({ productosModify, startCantidad, endCantidad, activateSearch }) {
-
-
-
-
     const [activate, setActivate] = useState(false);
     const [loadItems, setLoadItems] = useState(<Load />)
 
@@ -52,7 +48,7 @@ function Products({ productosModify, startCantidad, endCantidad, activateSearch 
                     activateSearch ?
                         // loadItems
                         // < CardProduct product={product} productosModify={productosModify} startCantidad={startCantidad} endCantidad={endCantidad} />
-                        < CardProduct product={product} productosModify={productosModify} startCantidad={startCantidad} endCantidad={endCantidad} />
+                        < ViewProduct product={product} productosModify={productosModify} startCantidad={startCantidad} endCantidad={endCantidad} />
 
                         // loadItems 
                         :

@@ -1,5 +1,7 @@
 /* mobile s*/
 @media (max-width: 320px) {
+
+
     .dropdown-toggle {
         font-size: 12px;
     }
@@ -29,9 +31,20 @@
         height: 100vh;
     }
 
+    .ul-img {
+        display: flex;
+    }
+
 }
 
 /* tablet */
+@media (max-width: 574px) {
+    .ul-img {
+        display: flex;
+
+    }
+}
+
 @media (max-width: 768px) {}
 
 /* laptop */

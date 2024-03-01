@@ -106,8 +106,8 @@ function NavBar({ myCart }) {
         }
     };
 
-    
-    
+
+
 
     useEffect(() => {
 
@@ -117,67 +117,77 @@ function NavBar({ myCart }) {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-blue border-bottom border-body p-3" data-bs-theme="ligth">
+            <nav className="navbar  navbar-dark navbar-expand-lg bg-blue border-bottom border-body p-3 " data-bs-theme="ligth">
+                {activate ? <>
 
-                <div className="container-fluid bg-re text-center center">
-
-                    {activate ? <>
+                    <div className='col-sm-3'>
                         <div className="bg-w hite col-md-auto heigth-100 center">
                             <a href="../dashboard" onClick={() => hiddenNavbar()}>
                                 <img src={logo} className='logo pr-2' alt="" />
                             </a>
                         </div>
+                    </div>
 
-                        <div className="color-white col-6 ">
-                            <div className="input-group">
-                                <input type="text" className="form-control color-black" placeholder={keywords[randomNumber]}
-                                    aria-label="Recipient's username" aria-describedby="button-addon2" name="producto" onChange={handleChange} onKeyDown={KeyDown} />
-                                <button className="btn btn-warning" type="button" id="button-addon2" onClick={() => searchProduct()} >
-                                    <i className="fa-solid fa-magnifying-glass"></i>
-                                </button>
-                            </div>
-                        </div>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
+                    <div class="collapse navbar-collapse   center " id="navbarScroll">
 
-                        <div className="color-white col col-lg-2">
-                            <div className='center'>
-                                <div>
-                                    <div className='input-group'>
-                                        <a href='../login'>
-                                            <span className="material-symbols-outlined size-40 color-white pr-2" onClick={() => hiddenNavbar()}>account_circle</span>
-                                        </a>
-                                        <div className='border-left pr-2 ' />
-                                        <Link to='../cart'>
-                                            {/* <span className="fa-solid fa-cart-shopping size-30 color-white pt-2" onClick={() => hiddenNavbar()}></span> */}
+                        <div className='container-fluid'>
+                            <div className='row'>
+                                <div className='col-sm-8  p-3'>
 
-                                            <a className=" bg-blue position-relative ">
-                                                {/* Inbox */}
-                                                <span className="material-symbols-outlined size-40 color-white pr-2">
-                                                    shopping_cart
-                                                </span>
-                                                <span className="position-absolute top-50 start-50 translate-middle badge rounded-pill bg-danger">
-                                                    {myCart.length}
-                                                    <span className="visually-hidden">unread messages</span>
-                                                </span>
-                                            </a>
-                                        </Link>
-                                        {/* <Link to="#"><span className="fa-solid fa-cart-shopping size-30 color-white"></span></Link> */}
+                                    <div className="input-group">
+                                        <input type="text" className="form-control color-black" placeholder={keywords[randomNumber]}
+                                            aria-label="Recipient's username" aria-describedby="button-addon2" name="producto" onChange={handleChange} onKeyDown={KeyDown} />
+                                        <button className="btn btn-warning" type="button" id="button-addon2" onClick={() => searchProduct()} >
+                                            <i className="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className='col-sm-4 '>
+                                    <div className='center'>
+                                        <div>
+                                            <div className='input-group'>
+                                                <a href='../login'>
+                                                    <span className="material-symbols-outlined size-40 color-white pr-2" onClick={() => hiddenNavbar()}>account_circle</span>
+                                                </a>
+                                                <div className='border-left pr-2 ' />
+                                                <Link to='../cart'>
+                                                    {/* <span className="fa-solid fa-cart-shopping size-30 color-white pt-2" onClick={() => hiddenNavbar()}></span> */}
+
+                                                    <a className=" bg-blue position-relative ">
+                                                        {/* Inbox */}
+                                                        <span className="material-symbols-outlined size-40 color-white pr-2">
+                                                            shopping_cart
+                                                        </span>
+                                                        <span className="position-absolute top-50 start-50 translate-middle badge rounded-pill bg-danger">
+                                                            {myCart.length}
+                                                            <span className="visually-hidden">unread messages</span>
+                                                        </span>
+                                                    </a>
+                                                </Link>
+                                                {/* <Link to="#"><span className="fa-solid fa-cart-shopping size-30 color-white"></span></Link> */}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </> :
+                    </div>
+                </>
+                    :
 
-                        <div className='width-100'>
-                            <div className="col-md-auto heigth-100 center">
-                                <a href="../dashboard" onClick={() => hiddenNavbar()}>
-                                    <img src={logo} className='logo pr-2' alt="" />
-                                </a>
-                            </div>
+                    <div className='width-100 '>
+                        <div className="col-md-auto heigth-100 center">
+                            <a href="../dashboard" onClick={() => hiddenNavbar()}>
+                                <img src={logo} className='logo pr-2' alt="" />
+                            </a>
                         </div>
-                    }
-                </div>
-            </nav>
+                    </div>
+                }
+            </nav >
         </>
     );
 }

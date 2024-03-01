@@ -1,0 +1,49 @@
+.card-modal {
+    width: 45%;
+    height: 90vh;
+    margin: 20px auto;
+    background-color: #d1d1d1;
+    border-radius: 8px;
+    /* z-index: 1; */
+    box-shadow: 0px 10px 10px rgb(121, 121, 121);
+    transition: 0.5s;
+}
+
+.card-modal:hover {
+
+    box-shadow: 0px 10px 10px rgb(94, 93, 93);
+}
+
+
+.header-modal {
+    margin: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+
+#title2 {
+    color: rgb(0, 0, 0);
+    padding-left: 50px;
+    font-size: 15px;
+}
+
+.code-container {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#code {
+    width: 90%;
+    height: 80vh;
+    resize: none;
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+/* #code:focus {
+    outline: none !important;
+} */

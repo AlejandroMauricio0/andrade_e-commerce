@@ -5,14 +5,12 @@ import Footer from "../components/footer";
 import FooteContact from "../components/footer_contact";
 import Carousel from "../components/carousel";
 import SubNavBar from "../components/subnabvar";
-import Filter from "../components/filter";
-import Products from "../components/products";
 import Searching from "../pages/searching";
 import ViewProduct from "../pages/view_producto";
 import Cart from "../pages/cart";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-import { Link, useActionData, useLocation, useNavigate } from 'react-router-dom';
+import Modal from "../components/modal";
 
 
 function Public() {
@@ -92,17 +90,35 @@ function Public() {
     //         }
     //     }
     // }, [myCart]);
-   
+
     // useEffect(() => {
     //     getProducts();
     // }, []);
 
+    const [isModalOpen, setModalOpen] = useState(false);
+
+
+    const openModal = () => {
+        setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+    };
+
     return (
         <Routes>
+            <Route path="/modal" element={
+                <div>
+                    <NavBar myCart={myCart} />
+                    <h1>Modal</h1>
+                    <Modal />
+                </div>
+            } />
             {/* Carrito de compras */}
             <Route path="/cart" element={
                 <div>
-                    <NavBar myCart={myCart}/>
+                    <NavBar myCart={myCart} />
                     <SubNavBar />
                     <div className="container-fluid">
                         <Cart myCart={myCart} setMyCart={setMyCart} />
@@ -112,7 +128,7 @@ function Public() {
             {/* visualiazar detalles del producto */}
             <Route path="/view_producto" element={
                 <div>
-                    <NavBar myCart={myCart}/>
+                    <NavBar myCart={myCart} />
                     <SubNavBar />
                     <div className="container-fluid">
                         <ViewProduct myCart={myCart} setMyCart={setMyCart} />
@@ -123,10 +139,10 @@ function Public() {
             {/* searching */}
             <Route path="/search" element={
                 <div>
-                    <NavBar myCart={myCart}/>
-                    <SubNavBar />
+                    <NavBar myCart={myCart} />
+                    {/* <SubNavBar /> */}
                     <div className="container-fluid ">
-                        <Searching   />
+                        <Searching />
                     </div>
                 </div>
             }>
@@ -135,7 +151,7 @@ function Public() {
             {/* home */}
             <Route path="/dashboard" element={
                 <div>
-                    <NavBar myCart={myCart}/>
+                    <NavBar myCart={myCart} />
                     <SubNavBar />
                     <Carousel />
                     <Footer />
@@ -147,11 +163,10 @@ function Public() {
             {/* login */}
             <Route path="/login" element={
                 <div>
-                    <NavBar myCart={myCart}/>
+                    <NavBar myCart={myCart} />
                     <Login />
                     <FooteContact />
                 </div>
-
             }></Route>
         </Routes>
     );

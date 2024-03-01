@@ -1,11 +1,10 @@
 import master_card from '../assets/images/icons8-mastercard.svg'
-import paypal from '../assets/images/icons8-paypal.svg'
 import visa from '../assets/images/icons8-visa.svg'
 
 function FooteContact() {
     return (
         <>
-
+            
 
             <div className="bg-blue color-white container-fluid mt-4  ">
                 <div>
@@ -51,7 +50,9 @@ function FooteContact() {
                                     <li>Politica de Privacidad</li>
                                     <li>Politica de Reembolso y Devoluciones</li>
                                     <li>Politica de envío</li>
-                                    <li>Termino de Servicio y Condiciones</li>
+                                    <li>
+                                        <div>Termino de Servicio y Condiciones</div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
