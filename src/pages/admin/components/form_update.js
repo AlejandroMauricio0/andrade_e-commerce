@@ -12,14 +12,15 @@ function FormUpDate() {
 
 
     const [dragging, setDragging] = useState(false);
+    // const [files, setFiles] = useState([]);
+    const [product, setProduct] = useState(content);
+
     const [files, setFiles] = useState([
         { name: `http://192.168.1.121:3003/Admin/viewImage/${content.img0}` },
         { name: `http://192.168.1.121:3003/Admin/viewImage/${content.img1}` },
         { name: `http://192.168.1.121:3003/Admin/viewImage/${content.img2}` },
         { name: `http://192.168.1.121:3003/Admin/viewImage/${content.img3}` },
     ]);
-    const [product, setProduct] = useState(content);
-
     const addItemStorage = async () => {
         alert("estoy ejecutando un post")
         try {

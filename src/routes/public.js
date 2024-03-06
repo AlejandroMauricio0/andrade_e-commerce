@@ -11,6 +11,9 @@ import Cart from "../pages/cart";
 import { useState } from "react";
 
 import Modal from "../components/modal";
+import Checkout from "../pages/checkout/pages/checkou";
+import FormCheckOut from "../pages/checkout/components/form_checkout";
+import NoFound from "../pages/404_error";
 
 
 function Public() {
@@ -115,9 +118,17 @@ function Public() {
                     <Modal />
                 </div>
             } />
+            {/* Validar de compras */}
+            <Route path="/checkout/*" element={<>
+                <NavBar myCart={myCart} />
+
+                <Checkout />
+            </>} >
+                {/* <Route path="form" element={<FormCheckOut />} /> */}
+            </Route>
             {/* Carrito de compras */}
             <Route path="/cart" element={
-                <div>
+                <div className="heigth-100-vh">
                     <NavBar myCart={myCart} />
                     <SubNavBar />
                     <div className="container-fluid">
@@ -130,7 +141,7 @@ function Public() {
                 <div>
                     <NavBar myCart={myCart} />
                     <SubNavBar />
-                    <div className="container-fluid">
+                    <div className="container-fluid ">
                         <ViewProduct myCart={myCart} setMyCart={setMyCart} />
                     </div>
                 </div>
@@ -166,6 +177,14 @@ function Public() {
                     <NavBar myCart={myCart} />
                     <Login />
                     <FooteContact />
+                </div>
+            }></Route>
+            {/* 404 not found */}
+            <Route path="/*" element={
+                <div className="bg-blue">
+                    {/* <NavBar myCart={myCart} /> */}
+                    {/* <Login /> */}
+                    <NoFound />
                 </div>
             }></Route>
         </Routes>

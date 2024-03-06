@@ -15,6 +15,8 @@ import './assets/styles/drop_button.css'
 import './assets/styles/drop_file.css'
 import './assets/styles/card_product.css'
 import './assets/styles/modal.css'
+import './assets/styles/navbar_left.css'
+import './assets/styles/404.css'
 
 // 
 
@@ -36,6 +38,12 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path='/user*' element={
+          <>
+            <Private />
+          </>
+        }
+        />
         <Route path='/admin*' element={
           <>
             <Private />

@@ -7,7 +7,7 @@ function GetAllItems() {
 
 
     const getItemStorage = async () => {
-        const url = 'http://192.168.100.71:3003/Admin/listProduct';
+        const url = 'http://192.168.1.121:3003/Admin/listProduct';
 
         try {
             let response = await fetch(url, {
@@ -37,17 +37,17 @@ function GetAllItems() {
     }, []);
     return (
         <>
-            <div className="container-fluid pt-5 heigth-100-vh bg-ededede ">
+            <div className="container-fluid pt-5 heigth-100-vh width-100 bg-ededede" >
+            <h1>Todos los productos en almacen </h1>
                 <div className="container-fluid mt-5  ">
 
-
-                    <div class="row row-cols-1 row-cols-md-5 g-4">
+                    <div class="row row-cols-1 row-cols-md-5 g-4" >
 
                         {
                             flag ?
                                 dataItem.map((content, index) => (
                                     <div class="col" key={index}>
-                                        <div class="card center">
+                                        <div class="card center" style={{ position: "inherit" }}>
                                             <CardProduct content={content} />
                                         </div>
                                     </div>

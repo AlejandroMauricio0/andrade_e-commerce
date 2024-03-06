@@ -15,6 +15,17 @@
     display: grid;
     place-items: center;
 }
+.center-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa toda la altura del viewport */
+    background-color: lightgray; /* Para visualización */
+}
+/* padding */
+.p-0 {
+    padding: 0;
+}
 
 /* Anchuras  */
 
@@ -29,6 +40,10 @@
 
 .width-95 {
     width: 95%;
+}
+
+.width-90 {
+    width: 90%;
 }
 
 .width-80 {
@@ -94,6 +109,10 @@
     height: 100vh;
 }
 
+.heigth-90-vh {
+    height: 90vh;
+}
+
 .heigth-85-vh {
     height: 85vh;
 }
@@ -110,12 +129,21 @@
     height: 90%;
 }
 
+.heigth-82 {
+    height: 82%;
+}
+
 .heigth-80 {
     height: 80%;
 }
 
+
 .heigth-70 {
     height: 70%;
+}
+
+.heigth-85-vh {
+    height: 85vh;
 }
 
 .heigth-80-vh {
@@ -138,6 +166,9 @@
     height: 20px;
 }
 
+.heigth-10 {
+    height: 10px;
+}
 
 /* Tamaño de letras */
 
@@ -155,6 +186,10 @@
 
 .size-25 {
     font-size: 25px;
+}
+
+.size-24 {
+    font-size: 24px;
 }
 
 .size-22 {
@@ -223,7 +258,8 @@ a {
     width: 10px;
 }
 
-textarea .overflow-scroll::-webkit-scrollbar-thumb {
+textarea,
+.overflow-scroll::-webkit-scrollbar-thumb {
     background-color: #0A1658;
     border-radius: 10px;
 }
@@ -259,8 +295,31 @@ textarea {
     padding: 0;
     /* list-style-type: false; */
 }
+
 /* size of view */
 .img-container {
     width: 100px;
     /* margin: 0 auto; */
+}
+
+/*  */
+.contenido-cart p {
+    margin: 0;
+    padding: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+/* .ma {
+    margin: auto;
+} */
+
+.line-normal {
+    line-height: normal;
 }

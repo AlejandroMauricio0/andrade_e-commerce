@@ -5,7 +5,8 @@ function Barleft({ setChangeImg, content }) {
     const [imageDescription, setImageDescription] = useState([]);
 
     const getImage = async () => {
-        const url = `http://192.168.100.71:3003/Admin/viewImageArray/${content.image_fk}`;
+        // const url = `http://192.168.100.71:3003/Admin/viewImageArray/${content.image_fk}`;
+        const url = `http://192.168.1.121:3003/Admin/viewImageArray/${content.image_fk}`;
 
         try {
             let response = await fetch(url, {

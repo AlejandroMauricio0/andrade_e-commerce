@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Filter from "../components/filter";
 import Products from "../components/products";
-import ViewProduct from "./view_producto";
-import data from '../data/data';
+// import ViewProduct from "./view_producto
+// import data from '../data/data';
 import { useLocation } from "react-router-dom";
 
 function Searching({ }) {
@@ -38,9 +38,9 @@ function Searching({ }) {
     const getProducts = async () => {
 
 
-        // const url = `http://192.168.1.121:3000/client/search_by_name?name=${nameProduct}&page=1`;
+        // const url = `http://192.168.1.121:3003/client/search_by_name?name=${nameProduct}&page=1`;
         // const url = `http://192.168.100.71:3000/client/search_by_name?searchTerm=${nameProduct}`;
-        const url = `http://192.168.100.71:3003/client/search_by_name?searchTerm=${nameProduct}`;
+        const url = `http://192.168.1.121:3003/client/search_by_name?searchTerm=${nameProduct}`;
 
         try {
             let response = await fetch(url, {
@@ -83,11 +83,11 @@ function Searching({ }) {
     return (
         <>
 
-            <div className="row">
-                <div className="col-6 col-md-4">
+            <div className="row mt-3">
+                <div className="col-md-4 ">
                     <Filter setStartCantidad={setStartCantidad} setEndCantidad={setEndCantidad} startCantidad={startCantidad} endCantidad={endCantidad} productosModify={productosModify} setproductosModify={setProductosModify} productos={productos} />
                 </div>
-                <div className="col-md-8  heigth-80-vh overflow-hidden">
+                <div className="col-md-8  heigth-85-vh overflow-hidden ">
                     <Products productosModify={productosModify} startCantidad={startCantidad} endCantidad={endCantidad} activateSearch={activateSearch} />
                 </div>
             </div>

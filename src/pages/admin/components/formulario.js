@@ -3,61 +3,81 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 
 function Formulario() {
+    var date, time;
 
     const [dragging, setDragging] = useState(false);
     const [files, setFiles] = useState([]);
     const [product, setProduct] = useState();
 
+
+    const getDate = () => {
+        // Crear una nueva instancia de Date para obtener la fecha y hora actuales
+        const now = new Date();
+
+        // Obtener la fecha en formato local
+        date = now.toLocaleDateString();
+
+        // Obtener la hora en formato local
+        time = now.toLocaleTimeString();
+
+        // Mostrar la fecha y la hora
+        console.log("Fecha:", date);
+        console.log("Hora:", time);
+    }
+
     const addItemStorage = async () => {
 
-        const formdata = new FormData();
-        formdata.append("id", "35<");
-        formdata.append("brand", product.brand);
-        formdata.append("model", product.model);
-        formdata.append("numberPart", product.numberPart);
-        formdata.append("description", product.description);
-        formdata.append("price", product.price);
-        formdata.append("stock", product.stock);
-        formdata.append("conditions", product.conditions);
-        formdata.append("status", product.status);
-        formdata.append("image", files[0],);
-        formdata.append("img1", files[0],);
-        formdata.append("img2", files[1],);
-        formdata.append("img3", files[2],);
-        formdata.append("img4", files[3],);
-
-        const requestOptions = {
-            method: "POST",
-            body: formdata,
-            redirect: "follow"
-        };
+        if (files.length === 0) {
 
 
-        try {
+            const formdata = new FormData();
+            formdata.append("id", "35<");
+            formdata.append("brand", product.brand);
+            formdata.append("model", product.model);
+            formdata.append("numberPart", product.numberPart);
+            formdata.append("description", product.description);
+            formdata.append("price", product.price);
+            formdata.append("stock", product.stock);
+            formdata.append("conditions", product.conditions);
+            formdata.append("status", product.status);
+            formdata.append("image", files[0],);
+            formdata.append("img1", files[0],);
+            formdata.append("img2", files[1],);
+            formdata.append("img3", files[2],);
+            formdata.append("img4", files[3],);
 
-            // url =  "http://192.168.1.121:3003/Admin/addProduct"
+            const requestOptions = {
+                method: "POST",
+                body: formdata,
+                redirect: "follow"
+            };
 
-            let response = await fetch('http://192.168.100.71:3003/Admin/addProduct', requestOptions);
 
-            let data = await response.json();
+            try {
 
-            // console.log("Data", data);
 
-            if (data.status == "success") {
-                Swal.fire({
-                    icon: "success",
-                    title: "success",
-                    text: "Se agregó el articulo correctamente!",
-                })
-            } else {
-                Swal.fire({
-                    icon: "error",
-                    title: "error",
-                    text: "No se pudo agregar el producto",
-                })
+                let response = await fetch('http://192.168.100.71:3003/Admin/addProduct', requestOptions);
+
+                let data = await response.json();
+
+                // console.log("Data", data);
+
+                if (data.status == "success") {
+                    Swal.fire({
+                        icon: "success",
+                        title: "success",
+                        text: "Se agregó el articulo correctamente!",
+                    })
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "error",
+                        text: "No se pudo agregar el producto",
+                    })
+                }
+            } catch (error) {
+
             }
-        } catch (error) {
-
         }
     }
 
@@ -109,10 +129,10 @@ function Formulario() {
 
     return (
         <>
-            <div className="heigth-100-vh container center pt-4 bg-ededede overflow-hidden overflow-scroll ">
+            <div className="heigth-100-vh container center pt-4 overflow-hidden overflow-scroll ">
 
-                <div className=''>
-                    <div className='container width-95  mt-5 '>
+                <div className='bg-ededede p-4 rounded'>
+                    <div className='container width-95  mt-2 '>
                         <h2>Añadir nuevo Item a Almacen</h2>
                         {/*  */}
                         <form class="row">

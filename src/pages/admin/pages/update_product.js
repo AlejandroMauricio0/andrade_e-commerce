@@ -1,16 +1,14 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react"
 import CardProduct from "../../../components/card_products";
 import { Link } from "react-router-dom";
 
-
 function UpdateProduct() {
     const [dataItem, setDataItem] = useState([]);
+    const [flag, setflag] = useState(false);
 
 
     const getItemStorage = async () => {
-        // alert("estoy ejecutando un post")
-        const url = 'http://192.168.100.71:3003/Admin/listProduct';
-        // const url = `http://192.168.1.121:3000/client/search_by_name?searchTerm=${nameProduct}`;
+        const url = 'http://192.168.1.121:3003/Admin/listProduct';
 
         try {
             let response = await fetch(url, {
@@ -25,8 +23,8 @@ function UpdateProduct() {
             if (data.data && data.data.length >= 1) {
                 // console.log(data.data);
                 setDataItem(data.data);
-
-                console.log("data", data);
+                setflag(!flag)
+                console.log(data);
             }
 
         } catch (error) {
@@ -38,59 +36,60 @@ function UpdateProduct() {
     useEffect(() => {
         getItemStorage();
     }, []);
-
     return (
         <>
-            <div className="container-fluid pt-5 ">
+            <div className="container-fluid pt-5 heigth-100-vh width-100 bg-ededede" >
+                <h1 className="">Actualizar Producto</h1>
                 <div className="container-fluid mt-5  ">
 
+                    <div class="row row-cols-1 row-cols-md-5 g-4" >
 
-                    <div class="row row-cols-1 row-cols-md-5 g-4">
+                        {
+                            flag ?
+                                dataItem.map((content, index) => (
+                                    <Link
+                                        to={{
+                                            pathname: '../form_product',
+                                            search: `?model=${content.model}`,
+                                        }} state={{
+                                            img3: `${content.images[3]}`,
+                                            img2: `${content.images[2]}`,
+                                            img1: `${content.images[1]}`,
+                                            img0: `${content.images[0]}`,
+                                            brand: `${content.brand}`,
+                                            status: `${content.status}`,
+                                            conditions: `${content.conditions}`,
+                                            stock: `${content.stock}`,
+                                            model: `${content.model}`,
+                                            id: `${content.numberPart}`,
+                                            price: `${content.price}`,
+                                            description: `${content.description}`,
+                                            image: 'http://192.168.1.121:3000/Admin/viewImage/' + `${content.image}`
+                                        }}
 
-                        {dataItem.map((content, index) => (
-                            <div class="col" key={index}>
+                                    >
 
-
-                                <Link to={{
-                                    pathname: '../storage/update',
-                                    search: `?model=${content.model}`,
-                                    // state: { content:content.name }
-                                }} state={{
-                                    img3: `${content.images[3]}`,
-                                    img2: `${content.images[2]}`,
-                                    img1: `${content.images[1]}`,
-                                    img0: `${content.images[0]}`,
-                                    brand: `${content.brand}`,
-                                    status: `${content.status}`,
-                                    conditions: `${content.conditions}`,
-                                    stock: `${content.stock}`,
-                                    model: `${content.model}`,
-                                    id: `${content.numberPart}`,
-                                    price: `${content.price}`,
-                                    description: `${content.description}`,
-                                    image: 'http://192.168.1.121:3000/Admin/viewImage/' + `${content.image}`
-                                }}
-                                    key={index}>
-
-                                    <div class="card center">
-                                        <div className='center'>
-                                            {/* Componente para cargar  la imagen del producto */}
-                                            <CardProduct content={content} />
-
-
-
+                                        <div class="col" key={index}>
+                                            <div class="card center" style={{ position: "inherit" }}>
+                                                <CardProduct content={content} />
+                                            </div>
                                         </div>
-                                    </div>
-                                </Link>
-                            </div>
-                        ))}
+                                    </Link>
+
+                                ))
+                                :
+                                <div className="center width-100 heigth-85-vh">
+                                    <h1>No hay productos :(</h1>
+                                </div>
+                        }
+
 
                     </div>
 
                 </div>
             </div>
-        </>)
-        ;
+        </>
+    );
 }
 
 export default UpdateProduct;

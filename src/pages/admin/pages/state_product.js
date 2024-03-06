@@ -73,7 +73,7 @@ function StateProduct() {
             console.error('Error al obtener productos:', error);
         }
 
-        
+
     }
 
     useEffect(() => {

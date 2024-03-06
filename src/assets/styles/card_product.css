@@ -1,19 +1,24 @@
-.card{
+.card {
     width: 100%;
     background-color: transparent;
 }
+
 .card-product {
     width: 100%;
     border-radius: 20px;
     background: #0A1658;
     padding: 5px;
-    overflow: hidden;
+    /* overflow: hidden; */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+    transition: background-color 0.5s ease;
 }
 
 .card-product:hover {
     transform: scale(1.05);
+    /* background: #b87e01; */
+    /* background-color: rgba(14, 13, 13, 0.712); */
+    /* position: inherit; */
 }
 
 .card-product .top-section {
@@ -27,7 +32,7 @@
     background-color: white;
     /* backgroundRepeat: 'no-repeat'; */
     background-repeat: no-repeat;
-    position: relative;
+    /* position: inherit; */
 }
 
 .card-product .top-section .border {
@@ -36,14 +41,14 @@
     width: 130px;
     background: white;
     /* background: red; */
-    position: relative;
+    /* position: inherit; */
     transform: skew(-40deg);
     box-shadow: -10px -10px 0 0 #0A1658;
 }
 
 .card-product .top-section .border::before {
     content: "";
-    position: absolute;
+    /* position: inherit; */
     width: 15px;
     height: 15px;
     top: 0;
@@ -55,7 +60,7 @@
 
 .card-product .top-section::before {
     content: "";
-    position: absolute;
+    /* position: inherit; */
     top: 30px;
     left: 0;
     background: rgba(255, 255, 255, 0);
@@ -65,7 +70,7 @@
 }
 
 .card-product .top-section .icons {
-    position: absolute;
+    /* position: inherit; */
     top: 0;
     width: 100%;
     height: 30px;

@@ -24,20 +24,21 @@ function ViewProduct({ myCart, setMyCart }) {
         <div className="row">
           <div className="col-sm-6 ">
             <div className="row">
-              <div className="col-sm-2 bg-yellow">
+              <div className="col-sm-3">
                 <Barleft setChangeImg={setChangeImg} content={content} />
               </div>
 
-              <div className="col-sm-9 bg-red bg-e center">
+              <div className="col-sm-9  bg-e center">
 
-                <div className="border border-2  bg-blue ">
+                <div className="border border-2 width-100">
                   <VisorImage changeImg={changeImg} />
+
                 </div>
                 <Table content={content} />
               </div>
             </div>
           </div>
-          <div className="col-sm-6 bg-orange d">
+          <div className="col-sm-6  d">
             <Description myCart={myCart} setMyCart={setMyCart} content={content} />
           </div>
         </div>

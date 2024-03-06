@@ -18,28 +18,36 @@ const Modal = () => {
   };
 
   return (
-    <div
-      style={{
-        overflow: 'hidden',
-        width: '100%', // Ancho de la imagen
-        height: '500px', // Alto de la imagen
-      }}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => setZoom(true)}
-      onMouseLeave={() => setZoom(false)}
-    >
-      <img
-        src={IMG1}
-        alt="Descripción de la imagen"
-        style={{
-          width: '100%',
-          height: '100%',
-          transform: `scale(${zoom ? 2 : 1})`,
-          transformOrigin: `${position.x * 100}% ${position.y * 100}%`,
-          transition: 'transform 0.2s',
-        }}
-      />
-    </div>
+    <>
+      <div className='bg-red center'>
+        
+
+        <div className='width-50 bg-blue'>
+          <div
+            style={{
+              overflow: 'hidden',
+              width: '100%', // Ancho de la imagen
+              height: '50vh', // Alto de la imagen
+            }}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={() => setZoom(true)}
+            onMouseLeave={() => setZoom(false)}
+          >
+            <img
+              src={IMG1}
+              alt="Descripción de la imagen"
+              style={{
+                width: '100%',
+                height: '100%',
+                transform: `scale(${zoom ? 2 : 1})`,
+                transformOrigin: `${position.x * 100}% ${position.y * 100}%`,
+                transition: 'transform 0.2s',
+              }}
+            />
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -26,7 +26,8 @@ function ViewProduct({ product, productosModify, startCantidad, endCantidad }) {
                                 id: `${content.numberPart}`,
                                 price: `${content.price}`,
                                 description: `${content.description}`,
-                                image: 'http://192.168.100.71:3003/Admin/viewImage/' + `${content.image}`
+                                image: 'http://192.168.1.121:3003/Admin/viewImage/' + `${content.image}`
+                                // image: 'http://192.168.100.71:3003/Admin/viewImage/' + `${content.image}`
                             }}
                                 key={index}>
 

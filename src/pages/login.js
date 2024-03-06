@@ -1,4 +1,4 @@
-import React, {  useState } from 'react';
+import React, { useState } from 'react';
 import Swal from 'sweetalert2'
 
 function Login() {
@@ -40,21 +40,6 @@ function Login() {
     };
 
 
-    // async function loginUser(credentials) {
-    //     try {
-    //         const response = await axios.post('http://192.168.1.121:3003/user/login', credentials, {
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             // withCredentials: true, // Si necesitas enviar cookies o credenciales
-    //         });
-    //         console.log(response.data);
-    //         return response.data;
-    //     } catch (error) {
-    //         console.error(error);
-    //         throw error; // O maneja el error de otra manera según tu lógica de aplicación
-    //     }
-    // }
 
     async function loginUser(credentials) {
         return await fetch('http://192.168.1.121:3003/user/login', {
@@ -124,8 +109,10 @@ function Login() {
                     <form className='form-login' onSubmit={handleRegister}>
                         <h1>Create Account</h1>
                         <span className='span-login'>or use your email for registration</span>
-                        <input className='input-login' type="text" placeholder="Name" value={nameRegister} onChange={handleNameRegisterChange} required />
+                        <input className='input-login' type="text" placeholder="Nombre completo" value={nameRegister} onChange={handleNameRegisterChange} required />
+                        <input className='input-login' type="email" placeholder="Numero de telefono"     onChange={handleEmailRegisterChange} required />
                         <input className='input-login' type="email" placeholder="Email" value={emailRegister} onChange={handleEmailRegisterChange} required />
+                        <input className='input-login' type="password" placeholder="Password" value={passwordRegister} onChange={handlePasswordRegisterChange} required />
                         <input className='input-login' type="password" placeholder="Password" value={passwordRegister} onChange={handlePasswordRegisterChange} required />
                         <button className='button-login'> Sign Up</button>
 

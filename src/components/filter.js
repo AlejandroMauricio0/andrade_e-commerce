@@ -5,7 +5,7 @@ function Filter({ setStartCantidad, setEndCantidad, startCantidad, endCantidad, 
 
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [stateProduct, setStateProduct] = useState("all");
+    const [stateProduct, setStateProduct] = useState("");
 
     // variables
     const pages = productosModify.length / 9;
@@ -45,11 +45,11 @@ function Filter({ setStartCantidad, setEndCantidad, startCantidad, endCantidad, 
 
     return (
         <>
-            <div className="width-100 heigth-0 pr-4  border border-3 mt-5 ">
+            <div className="width-100 heigth-0 pr-4 border border-3 mt-5 ">
 
                 <div className="width-95 text-start ms-2">
                     <div className="bg-re">
-                        <h2 className="border-b">Filter</h2>
+                        <h2 className="border-b">Filtrado por: {stateProduct} </h2>
                         <div className="form-check">
                             <input
                                 className="form-check-input"
@@ -108,7 +108,7 @@ function Filter({ setStartCantidad, setEndCantidad, startCantidad, endCantidad, 
                         </div>
 
                     </div>
-                    <p>Opcion seleccionada: {stateProduct}</p>
+
                 </div>
 
                 {/* pagination button*/}

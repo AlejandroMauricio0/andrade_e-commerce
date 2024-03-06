@@ -77,7 +77,7 @@ function NavBar({ myCart }) {
     // funciones
     const hiddenNavbar = () => {
         // let token = localStorage.getItem('token')
-        if (myArray[1] === "login") {
+        if (myArray[1] === "login" || myArray[1] == 'checkout') {
             setActivate(false);
             // setUserPro   file(jwt_decode(token))
         } else {
