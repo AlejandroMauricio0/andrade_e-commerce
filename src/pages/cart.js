@@ -6,6 +6,7 @@ import img1 from '../assets/images/simodrive/1.jpg'
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 
 // or via CommonJS
@@ -15,6 +16,7 @@ function Cart({ myCart, setMyCart }) {
     // const notify = () => toast.success("El Carrito esta vacio, añada un producto");
 
     const [totalPay, setTotalPay] = useState(0);
+    const navigate = useNavigate();
 
 
 
@@ -103,24 +105,6 @@ function Cart({ myCart, setMyCart }) {
     const cartValidate = () => {
         console.log("se esta ejecutando", myCart.length);
         if (myCart.length == 0) {
-
-        //     const Toast = Swal.mixin({
-        //         toast: true,
-        //         position: "center",
-        //         showConfirmButton: false,
-        //         timer: 3000,
-        //         timerProgressBar: true,
-        //         // didOpen: (toast) => {
-        //         //     toast.onmouseenter = Swal.stopTimer;
-        //         //     toast.onmouseleave = Swal.resumeTimer;
-        //         // }
-        //     });
-        //     Toast.fire({
-        //         icon: "error",
-        //         title: "El carrito esta vacio, añada un producto"
-        //     });
-        // // } else 
-        // {
             const Toast = Swal.mixin({
                 toast: true,
                 position: "center",
@@ -132,6 +116,10 @@ function Cart({ myCart, setMyCart }) {
                 icon: "success",
                 title: "Preparando todo para tu compra"
             });
+            navigate('../checkout');
+
+        } else {
+            //
         }
     }
 
@@ -150,6 +138,8 @@ function Cart({ myCart, setMyCart }) {
 
     return (
         <>
+            {/* {
+                localStorage.getItem('section_token') ? */}
             <div className="mt-2 ">
                 <p className="text-start gidogu size-64">Mi carrito</p>
                 <div className="row">
@@ -175,14 +165,14 @@ function Cart({ myCart, setMyCart }) {
                                             </div>
                                             <div className='col-6 center'>
                                                 <div className='container-xxl'>
-                                                    <div className='text-start gidogu bg-red'>{content.name}</div>
-                                                    <div className=' text-start m-0 bg-yellow gidogu size-24'>
+                                                    <div className='text-start gidogu '>{content.name}</div>
+                                                    <div className=' text-start m-0  gidogu size-24'>
                                                         {content.price}
                                                     </div>
                                                 </div>
 
                                             </div>
-                                            <div className="col-3 bg-green flex-fil l center">
+                                            <div className="col-3 flex-fil l center">
                                                 <div className="btn-group" >
                                                     <button type="button" className="btn btn-outline-dark rounded-circle  p" onClick={() => deleteItemCar(content.quantity, content.uid)}>
                                                         -
@@ -191,7 +181,7 @@ function Cart({ myCart, setMyCart }) {
                                                     <button type="button" className="btn btn-outline-dark rounded-circle" onClick={() => addItemProduct(content.uid)}>+</button>
                                                 </div>
                                             </div>
-                                            <div className="col-2 bg-red flex-fill center">
+                                            <div className="col-2 flex-fill center">
                                                 <h1 className='gidogu size-25'>$ {(content.totaly).toFixed(2)} </h1>
                                             </div>
                                         </div>
@@ -231,6 +221,13 @@ function Cart({ myCart, setMyCart }) {
                     </div>
                 </div>
             </div>
+            {/* :
+                     <>
+                         <div className='container heigth-80-vh center'>
+                             <h2>Inicia sesion para poder comprar tu carrito</h2>
+                         </div>
+                     </>
+             } */}
         </>
     );
 }

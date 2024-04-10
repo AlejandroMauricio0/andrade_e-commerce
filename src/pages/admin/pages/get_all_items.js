@@ -7,7 +7,7 @@ function GetAllItems() {
 
 
     const getItemStorage = async () => {
-        const url = 'http://192.168.1.121:3003/Admin/listProduct';
+        const url = 'http://192.168.100.71:3003/Admin/listProduct';
 
         try {
             let response = await fetch(url, {

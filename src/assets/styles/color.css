@@ -76,6 +76,10 @@
     color: red;
 }
 
+.color-DCDCDC{
+    color: #DCDCDC;
+}
+
 .color-green-red {
     color: greenyellow;
     /* background: linear-gradient(to right, #4CAF50 0%, #FF0000 100%); */

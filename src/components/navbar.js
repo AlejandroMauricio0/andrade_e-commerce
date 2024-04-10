@@ -74,11 +74,17 @@ function NavBar({ myCart }) {
         }
     }
 
-    // funciones
+    const goToCart = () => {
+        // alert("carrito")
+        navigate('../cart');
+    }
+
+    // funcionessi 
     const hiddenNavbar = () => {
         // let token = localStorage.getItem('token')
-        if (myArray[1] === "login" || myArray[1] == 'checkout') {
+        if (myArray[1] === "login" || myArray[1] == 'checkout' || myArray[1] == 'user') {
             setActivate(false);
+
             // setUserPro   file(jwt_decode(token))
         } else {
             setActivate(true);
@@ -105,9 +111,6 @@ function NavBar({ myCart }) {
             searchProduct();
         }
     };
-
-
-
 
     useEffect(() => {
 
@@ -154,7 +157,8 @@ function NavBar({ myCart }) {
                                                     <span className="material-symbols-outlined size-40 color-white pr-2" onClick={() => hiddenNavbar()}>account_circle</span>
                                                 </a>
                                                 <div className='border-left pr-2 ' />
-                                                <Link to='../cart'>
+
+                                                <a onClick={() => goToCart()}>  
                                                     {/* <span className="fa-solid fa-cart-shopping size-30 color-white pt-2" onClick={() => hiddenNavbar()}></span> */}
 
                                                     <a className=" bg-blue position-relative ">
@@ -167,7 +171,9 @@ function NavBar({ myCart }) {
                                                             <span className="visually-hidden">unread messages</span>
                                                         </span>
                                                     </a>
-                                                </Link>
+                                                </a>
+
+
                                                 {/* <Link to="#"><span className="fa-solid fa-cart-shopping size-30 color-white"></span></Link> */}
                                             </div>
                                         </div>

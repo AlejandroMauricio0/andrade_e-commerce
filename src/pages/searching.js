@@ -39,8 +39,9 @@ function Searching({ }) {
 
 
         // const url = `http://192.168.1.121:3003/client/search_by_name?name=${nameProduct}&page=1`;
+        const url = `http://192.168.100.71:3003/client/search_by_name?searchTerm=${nameProduct}`;
         // const url = `http://192.168.100.71:3000/client/search_by_name?searchTerm=${nameProduct}`;
-        const url = `http://192.168.1.121:3003/client/search_by_name?searchTerm=${nameProduct}`;
+        // const url = `http://192.168.1.121:3003/client/search_by_name?searchTerm=${nameProduct}`;
 
         try {
             let response = await fetch(url, {

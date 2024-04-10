@@ -7,7 +7,7 @@ function CardGroup() {
 
 
     const getDataRamdom = async () => {
-        const url = 'http://192.168.1.121:3000/client/items_Random';
+        const url = 'http://192.168.100.71:3003/client/items_Random';
         // const url = `http://192.168.1.121:3000/client/search_by_name?searchTerm=${nameProduct}`;
 
         try {
@@ -44,7 +44,7 @@ function CardGroup() {
                 {
                     dataItem.map((content, index) => (
                         <div className="card border">
-                            <img src={'http://192.168.1.121:3000/Admin/viewImage/' + `${content.image}`} className="card-img-top" alt="..." />
+                            <img src={'http://192.168.100.71:3003/Admin/viewImage/' + `${content.image}`} className="card-img-top" alt="..." />
                             <div className="card-body">
                                 <h5 className="card-title"></h5>
                                 <p className="card-text"></p>

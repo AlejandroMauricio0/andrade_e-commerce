@@ -16,7 +16,8 @@ import './assets/styles/drop_file.css'
 import './assets/styles/card_product.css'
 import './assets/styles/modal.css'
 import './assets/styles/navbar_left.css'
-import './assets/styles/404.css'
+import './assets/styles/card_payment.css'
+// import './assets/styles/404.css'
 
 // 
 
@@ -32,15 +33,18 @@ import Loading from './components/loading';
 import { Routes, Route } from 'react-router';
 import { useState } from 'react';
 import Private from './routes/private_admin';
+import NoFound from './pages/404_error';
+import PrivateUser from './routes/private_user';
 
 function App() {
+  const [myCart, setMyCart] = useState([]);
 
   return (
     <div className="App">
       <Routes>
         <Route path='/user*' element={
           <>
-            <Private />
+            <PrivateUser myCart={myCart} setMyCart={setMyCart} />
           </>
         }
         />
@@ -52,7 +56,7 @@ function App() {
         />
         <Route path='/*' element={
           <div className=''>
-            <Public />
+            <Public myCart={myCart} setMyCart={setMyCart} />
           </div>
         } />
         <Route path='/' element={
@@ -60,7 +64,9 @@ function App() {
             <Loading />
           </div>
         } />
-        <Route path='*' element={<center>404 no found</center>} />
+        <Route path='*' element={
+          <NoFound />
+        } />
       </Routes>
     </div>
   );

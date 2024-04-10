@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 // import Zoom from "react-img-zoom";
 // import img1 from '../assets/images/simodrive/1.jpg'
-import IMG1 from 'C:/Users/alexm/Pictures/Screenshots/Captura de pantalla 2024-01-05 211904.png'
+// import IMG1 from 'C:/Users/alexm/Pictures/Screenshots/Captura de pantalla 2024-01-05 211904.png'
 
 function VisorImage({ changeImg }) {
 

@@ -7,6 +7,7 @@ import UpdateProduct from "../pages/admin/pages/update_product";
 import FormUpDate from "../pages/admin/components/form_update";
 import DeleteProduct from "../pages/admin/pages/delete_product";
 import NavBarleft from "../pages/admin/components/bar_left";
+import TableAdmin from "../pages/admin/components/table_admin";
 
 function Private() {
 
@@ -19,6 +20,13 @@ function Private() {
                     <GetAllItems />
                 </div>} />
                 <Route path="add_product" element={<Formulario />} />
+                <Route path="sales_history" element={<TableAdmin />} />
+
+                <Route path="notify" element={
+                    <div className="width-100" style={{ position: "inherit" }}>
+                        <NavbarAdmin />
+                    </div>
+                } />
                 <Route path="delete_product" element={<DeleteProduct />} />
                 <Route path="state_product" element={<StateProduct />} />
                 <Route path="update_producto/" element={<UpdateProduct />} >

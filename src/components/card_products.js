@@ -5,7 +5,7 @@ function CardProduct({ content }) {
     return (
         <>
             <div class="card-product border "  style={{position:'inherit'}}>
-                <div class="top-section " style={{ backgroundImage: `url(http://192.168.1.121:3003/Admin/viewImage/${content.image})`, backgroundPosition: 'center' }}>
+                <div class="top-section " style={{ backgroundImage: `url(http://192.168.100.71:3003/Admin/viewImage/${content.image})`, backgroundPosition: 'center' }}>
                 </div>
 
                 <div class="bottom-section">

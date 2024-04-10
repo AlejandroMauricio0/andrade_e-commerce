@@ -40,7 +40,7 @@ function UpdateProduct() {
         <>
             <div className="container-fluid pt-5 heigth-100-vh width-100 bg-ededede" >
                 <h1 className="">Actualizar Producto</h1>
-                <div className="container-fluid mt-5  ">
+                <div className="container-fluid   ">
 
                     <div class="row row-cols-1 row-cols-md-5 g-4" >
 
@@ -64,7 +64,7 @@ function UpdateProduct() {
                                             id: `${content.numberPart}`,
                                             price: `${content.price}`,
                                             description: `${content.description}`,
-                                            image: 'http://192.168.1.121:3000/Admin/viewImage/' + `${content.image}`
+                                            image: 'http://192.168.100.71:3000/Admin/viewImage/' + `${content.image}`
                                         }}
 
                                     >

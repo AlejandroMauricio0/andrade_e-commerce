@@ -16,10 +16,12 @@ import FormCheckOut from "../pages/checkout/components/form_checkout";
 import NoFound from "../pages/404_error";
 
 
-function Public() {
+function Public({ myCart, setMyCart }) {
 
     // const [myCart, setMyCart] = useState
-    const [myCart, setMyCart] = useState([]);
+    //  const [myCart, setMyCart] = useState([]);
+
+
 
     // const [productsData, setProductsData] = useState([]);
     // const [activateSearch, setActivateSearch] = useState(false);
@@ -121,7 +123,6 @@ function Public() {
             {/* Validar de compras */}
             <Route path="/checkout/*" element={<>
                 <NavBar myCart={myCart} />
-
                 <Checkout />
             </>} >
                 {/* <Route path="form" element={<FormCheckOut />} /> */}

@@ -45,6 +45,9 @@
 .width-90 {
     width: 90%;
 }
+.width-82 {
+    width: 82%;
+}
 
 .width-80 {
     width: 80%;
@@ -66,9 +69,7 @@
     width: 50%;
 }
 
-.width-30-px {
-    height: 40px;
-}
+
 
 .width-30 {
     width: 28%;
@@ -150,15 +151,29 @@
     height: 80vh;
 }
 
+.heigth-40-vh {
+    height: 40vh;
+}
+
 .heigth-250-px {
     height: 150px;
 }
 
+.heigth-100-px {
+    height: 100px;
+}
+
+.heigth-40 {
+    height: 40%;
+}
 .heigth-50 {
     height: 50%;
 }
 
-.heigth-20- {
+.heigth-30-vh {
+    height: 30vh;
+}
+.heigth-30 {
     height: 20%;
 }
 
@@ -166,7 +181,13 @@
     height: 20px;
 }
 
+.heigth-10-p {
+    height: 10%;
+}
 .heigth-10 {
+    height: 10px;
+}
+.heigth-10-vh {
     height: 10px;
 }
 
