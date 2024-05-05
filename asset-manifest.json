@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/andrade_e-commerce/static/css/main.56f36cf0.css",
+    "main.js": "/andrade_e-commerce/static/js/main.6cfebad6.js",
+    "static/js/453.640509b8.chunk.js": "/andrade_e-commerce/static/js/453.640509b8.chunk.js",
+    "static/media/1.jpg": "/andrade_e-commerce/static/media/1.993ceed8b15c8f0efa7b.jpg",
+    "static/media/banner_login.png": "/andrade_e-commerce/static/media/banner_login.580fd0d748477b71cd06.png",
+    "static/media/cnc_1200x420 1.png": "/andrade_e-commerce/static/media/cnc_1200x420 1.daeadcdc7ac81e9d6bae.png",
+    "static/media/ANDRADE_MKTPLAN_BRANDING-03.png": "/andrade_e-commerce/static/media/ANDRADE_MKTPLAN_BRANDING-03.d965f3c9d491e2ecb9dd.png",
+    "static/media/ANDRADE_MKTPLAN_BRANDING-02.png": "/andrade_e-commerce/static/media/ANDRADE_MKTPLAN_BRANDING-02.9d63c04604ea93b4ca45.png",
+    "static/media/ANDRADE_MKTPLAN_BRANDING-01.png": "/andrade_e-commerce/static/media/ANDRADE_MKTPLAN_BRANDING-01.6b020828d764a7c2bb1c.png",
+    "static/media/disiable.svg": "/andrade_e-commerce/static/media/disiable.1f2c84f9924f0116d463701da1a03477.svg",
+    "static/media/Disponible.svg": "/andrade_e-commerce/static/media/Disponible.116f0ce339a6ad36f4f55b2d532ab60e.svg",
+    "index.html": "/andrade_e-commerce/index.html",
+    "static/media/icons8-mastercard.svg": "/andrade_e-commerce/static/media/icons8-mastercard.7704636ade3bcc5c8e0b70f480c8b7c9.svg",
+    "static/media/icons8-visa.svg": "/andrade_e-commerce/static/media/icons8-visa.662bce1b779919d5e5cf188074378a25.svg",
+    "main.56f36cf0.css.map": "/andrade_e-commerce/static/css/main.56f36cf0.css.map",
+    "main.6cfebad6.js.map": "/andrade_e-commerce/static/js/main.6cfebad6.js.map",
+    "453.640509b8.chunk.js.map": "/andrade_e-commerce/static/js/453.640509b8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.56f36cf0.css",
+    "static/js/main.6cfebad6.js"
+  ]
+}
